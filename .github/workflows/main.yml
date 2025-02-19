@@ -20,6 +20,9 @@ jobs:
     - name: Install Composer dependencies
       run: composer install
 
+    - name: List Vendor Bin Directory
+      run: ls -la vendor/bin
+
     - name: Verify PHP_CodeSniffer installation
       run: vendor/bin/phpcs --version
 
