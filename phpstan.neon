@@ -1,0 +1,5 @@
+parameters:
+  level: max
+  paths:
+    - /Users/leealex1/Desktop/插件开发/woocommerce-multisite-login
+

@@ -1,0 +1,76 @@
+.
+├── .DS_Store
+├── .vscode
+├── admin
+│   ├── class-admin-settings.php
+│   └── views
+│       └── admin-settings.php
+├── assets
+│   ├── .DS_Store
+│   └── wechat-icon.png
+├── composer.json
+├── composer.lock
+├── includes
+│   ├── .DS_Store
+│   ├── class-cross-site-login.php
+│   ├── class-debug-logger.php
+│   ├── class-multisite-sync.php
+│   ├── class-user-binding.php
+│   ├── class-user-query.php
+│   ├── compliance
+│   │   └── class-gdpr.php
+│   ├── security
+│   │   └── class-data-encryption.php
+│   ├── sms
+│   │   ├── class-sms-anti-flood.php
+│   │   ├── class-sms-core.php
+│   │   └── gateways
+│   │       ├── class-aliyun-sms.php
+│   │       └── class-tencent-sms.php
+│   └── wechat
+│       └── class-wechat-oauth.php
+├── languages
+│   ├── .DS_Store
+│   ├── woocommerce-multisite-login-en_US.mo
+│   └── woocommerce-multisite-login-en_US.po
+├── launch.json
+├── phpstan.neon
+├── plugin-structure.txt
+├── readme.txt
+├── templates
+│   ├── myaccount
+│   │   └── bind-form.php
+│   └── wechat-login-form.php
+├── uninstall.php
+├── vendor
+│   ├── autoload.php
+│   ├── bin
+│   │   ├── phpstan
+│   │   └── phpstan.phar
+│   ├── composer
+│   │   ├── ClassLoader.php
+│   │   ├── InstalledVersions.php
+│   │   ├── LICENSE
+│   │   ├── autoload_classmap.php
+│   │   ├── autoload_files.php
+│   │   ├── autoload_namespaces.php
+│   │   ├── autoload_psr4.php
+│   │   ├── autoload_real.php
+│   │   ├── autoload_static.php
+│   │   ├── installed.json
+│   │   └── installed.php
+│   └── phpstan
+│       └── phpstan
+│           ├── LICENSE
+│           ├── README.md
+│           ├── UPGRADING.md
+│           ├── bootstrap.php
+│           ├── composer.json
+│           ├── conf
+│           │   └── bleedingEdge.neon
+│           ├── phpstan
+│           ├── phpstan.phar
+│           └── phpstan.phar.asc
+└── woocommerce-multisite-login.php
+
+19 directories, 54 files
