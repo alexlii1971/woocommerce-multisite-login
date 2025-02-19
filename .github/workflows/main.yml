@@ -14,8 +14,14 @@ jobs:
       with:
         php-version: 7.4
 
+    - name: Verify PHP version
+      run: php -v
+
     - name: Install Composer dependencies
       run: composer install
+
+    - name: Check Composer dependencies
+      run: composer show
 
     - name: Run PHP_CodeSniffer
       run: vendor/bin/phpcs --standard=PSR12 src/
@@ -31,6 +37,9 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Verify Node.js version
+      run: node -v
+
     - name: Install Node.js dependencies
       run: npm install
 
@@ -39,4 +48,3 @@ jobs:
 
     - name: Run Jest tests
       run: npm test
-
