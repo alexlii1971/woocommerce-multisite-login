@@ -58,16 +58,3 @@ function add_sms_wechat_login_buttons() {
         wc_get_template('login/wechat-login-button.php', [], '', WC_MULTISITE_LOGIN_PLUGIN_DIR . 'templates/');
     }
 }
-
-/**
- * 挂载微信登录按钮到 WooCommerce 登录/注册页面
- */
-add_action('woocommerce_login_form', 'add_wechat_login_button');
-add_action('woocommerce_register_form', 'add_wechat_login_button');
-
-function add_wechat_login_button() {
-    // 仅在微信登录启用时显示
-    if (get_option('wc_wechat_enabled')) {
-        wc_get_template('login/wechat-login-button.php', [], '', WC_MULTISITE_LOGIN_PLUGIN_DIR . 'templates/');
-    }
-}
