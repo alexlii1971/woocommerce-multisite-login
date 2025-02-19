@@ -1,0 +1,41 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 7.4
+
+    - name: Install Composer dependencies
+      run: composer install
+
+    - name: Run PHP_CodeSniffer
+      run: vendor/bin/phpcs --standard=PSR12 src/
+
+    - name: Run PHP-CS-Fixer
+      run: vendor/bin/php-cs-fixer fix --dry-run --diff
+
+    - name: Run PHPUnit tests
+      run: vendor/bin/phpunit
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install Node.js dependencies
+      run: npm install
+
+    - name: Run ESLint
+      run: npm run lint
+
+    - name: Run Jest tests
+      run: npm test
